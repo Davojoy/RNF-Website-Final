@@ -31,10 +31,10 @@ function DonateHero() {
 }
 
 function DonationForm() {
-  const [amount, setAmount] = useState('50');
+  const [amount, setAmount] = useState('50000');
   const [frequency, setFrequency] = useState('monthly');
 
-  const presets = ['20', '50', '100', '250', '500'];
+  const presets = ['10000', '25000', '50000', '100000', '250000'];
 
   return (
     <section className="py-24 bg-white relative -mt-16 z-20">
@@ -68,11 +68,11 @@ function DonationForm() {
                   onClick={() => setAmount(p)}
                   className={`py-4 rounded-xl border-2 font-bold transition-all ${amount === p ? 'border-primary bg-primary/5 text-primary' : 'border-gray-100 text-gray-500 hover:border-gray-200'}`}
                 >
-                  ${p}
+                  ₦{p}
                 </button>
               ))}
               <div className="relative">
-                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-bold">$</span>
+                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-bold">₦</span>
                  <input 
                   type="text" 
                   placeholder="Other" 
@@ -99,10 +99,10 @@ function DonationForm() {
             <h3 className="text-4xl font-bold text-dark mb-10 leading-tight">Where Your Money Goes</h3>
             <div className="space-y-8">
               {[
-                { amt: '$20', desc: 'Provides a dignity kit (sanitary towels & hygiene items) for 2 months.' },
-                { amt: '$50', desc: 'Covers school fees and supplies for a girl for one semester.' },
-                { amt: '$100', desc: 'Supports a community safe space for 10 girls for a month.' },
-                { amt: '$500', desc: 'Funds a full-year STEM scholarship for a talented young woman.' },
+                { amt: '₦30,000', desc: 'Provides a dignity kit (sanitary towels & hygiene items) for 2 months.' },
+                { amt: '₦75,000', desc: 'Covers school fees and supplies for a girl for one semester.' },
+                { amt: '₦150,000', desc: 'Supports a community safe space for 10 girls for a month.' },
+                { amt: '₦750,000', desc: 'Funds a full-year STEM scholarship for a talented young woman.' },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 items-start">
                   <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent font-black text-xl shrink-0 uppercase tracking-tighter shadow-inner">

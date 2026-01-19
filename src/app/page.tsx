@@ -52,14 +52,9 @@ function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/images/home/group-of-school-teen-girls.jpg')" }}
     >
-      {/* Dark overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/80 via-dark/60 to-primary/40" />
+      {/* Dark overlay with lighter gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-dark/40 to-primary/20" />
 
-      {/* Animated shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-secondary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -92,7 +87,7 @@ function HeroSection() {
 
           <div ref={imageRef} className="hidden lg:block relative">
             <div className="relative w-full max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-secondary/40 rounded-3xl transform rotate-6 blur-sm" />
+              
               <Image
                 src="/images/home/girl-hero-logo.png"
                 alt="Empowering Teenage Girls"
